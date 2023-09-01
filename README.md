@@ -1,4 +1,4 @@
-# Pasantías Técnica 3 - MDP
+# Pasantías Técnica 3 - MDP ([Rocio Casquero](https://github.com/RocioCasquero) y [Sofia Baez](https://github.com/sofibxez))
 
 Esto es un proyecto inicializado con [Next.js](https://nextjs.org/docs)
 utilizando
@@ -25,3 +25,8 @@ Para saber más acerca de este proyecto:
 
 - [Next.js](https://nextjs.org/docs)
 - [Material UI](https://mui.com/material-ui/getting-started/)
+
+---
+
+Hecho con ❤️ por [Rocio Casquero](https://github.com/RocioCasquero) y
+[Sofia Baez](https://github.com/sofibxez) ©2023
