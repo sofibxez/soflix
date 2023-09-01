@@ -1,49 +1,27 @@
-# Material UI - Next.js Pages Router example
+# Pasantías Técnica 3 - MDP
 
-## How to use
+Esto es un proyecto inicializado con [Next.js](https://nextjs.org/docs)
+utilizando
+[`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app)
+con [Material UI](https://mui.com/material-ui/getting-started/) instalado.
 
-Download the example [or clone the repo](https://github.com/mui/material-ui):
+## Como utilizarlo
 
-<!-- #default-branch-switch -->
+Puedes clonar el repositorio [o visitar el sitio web](#):
 
-```bash
-curl https://codeload.github.com/mui/material-ui/tar.gz/master | tar -xz --strip=2  material-ui-master/examples/material-ui-nextjs-pages-router
-cd material-ui-nextjs-pages-router
-```
-
-Install it and run:
+Instala las dependencias e inicializa el servidor local:
 
 ```bash
 npm install
 npm run dev
 ```
 
-or:
+Abre [http://localhost:3000](http://localhost:3000) en tu navegador para ver el
+resultado.
 
-<!-- #default-branch-switch -->
+## Links útiles
 
-[![Edit on StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/mui/material-ui/tree/master/examples/material-ui-nextjs-pages-router)
+Para saber más acerca de este proyecto:
 
-[![Edit on CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/mui/material-ui/tree/master/examples/material-ui-nextjs-pages-router)
-
-## The idea behind the example
-
-**Note:** This example is set up to use the Next.js Pages Router.
-As of Next.js 13.4, the newer App Router pattern is stable.
-We recommend starting new projects with the [Material UI with Next.js (App Router) example](https://github.com/mui/material-ui/tree/master/examples/material-ui-nextjs) unless you need (or prefer) the Pages Router.
-
-The project uses [Next.js](https://github.com/vercel/next.js), which is a framework for server-rendered React apps.
-It includes `@mui/material` and its peer dependencies, including [Emotion](https://emotion.sh/docs/introduction), the default style engine in Material UI v5.
-If you prefer, you can [use styled-components instead](https://mui.com/material-ui/guides/interoperability/#styled-components).
-
-## The Link component
-
-The [example folder](https://github.com/mui/material-ui/tree/HEAD/examples/material-ui-nextjs-pages-router) provides an adapter for the use of [Next.js's Link component](https://nextjs.org/docs/api-reference/next/link) with MUI.
-More information [in the documentation](https://mui.com/material-ui/guides/routing/#next-js).
-
-## What's next?
-
-<!-- #default-branch-switch -->
-
-You now have a working example project.
-You can head back to the documentation and continue by browsing the [templates](https://mui.com/material-ui/getting-started/templates/) section.
+- [Next.js](https://nextjs.org/docs)
+- [Material UI](https://mui.com/material-ui/getting-started/)
