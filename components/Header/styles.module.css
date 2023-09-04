@@ -1,15 +1,20 @@
 .header_container {
 	position: fixed;
 	width: 100vw;
-	height: 80px;
+	height: 64px;
 	z-index: 999;
 }
 
 .header {
 	width: 100vw;
-	height: 80px;
+	height: 64px;
 	background-color: transparent;
 	box-shadow: none;
+	transition: background-color 0.5s ease;
+}
+
+.header_has_scroll {
+	background-color: #93c572;
 }
 
 .toolbar {
@@ -17,7 +22,7 @@
 	justify-content: space-between;
 	/* El width es: 100% - (margin-left x 2) */
 	width: 84%;
-	height: 80px;
+	height: 64px;
 	padding: 0;
 	color: white;
 }
@@ -30,6 +35,9 @@
 
 .menu_container > a {
 	text-decoration: none;
+	color: white;
+}
+.menu_container > a > button {
 	color: white;
 }
 

@@ -1,25 +1,54 @@
-import * as React from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import {
 	AppBar,
 	Box,
 	Toolbar,
-	Typography,
 	Button,
 	// IconButton
 	// MenuIcon
 } from '@mui/material';
-import { MENU_CHOICES } from '../../constants/menu/menuList';
+import { MENU_CHOICES } from '../../constants/header/menuList';
+import { DISTANCE_TO_CHANGE } from '../../constants/header/headerRules';
 import classNames from 'classnames';
 import Logo from './../../assets/img/logo.png';
 import globalStyles from './../../assets/styles/global.module.css';
 import styles from './styles.module.css';
 
 const Header = () => {
+	const [scrollY, setScrollY] = useState(0);
+	const [hasScroll, setHasScroll] = useState(false);
+
+	useEffect(() => {
+		// va actualizando "scrollY" con la ubicación del scroll
+		const handleScroll = () => {
+			setScrollY(window.scrollY);
+		};
+
+		window.addEventListener('scroll', handleScroll);
+
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+		};
+	}, []);
+
+	useEffect(() => {
+		// si el scroll supera el limite activamos "hasScroll"
+		if (scrollY > DISTANCE_TO_CHANGE) {
+			setHasScroll(true);
+		} else {
+			setHasScroll(false);
+		}
+	}, [scrollY, DISTANCE_TO_CHANGE]);
+
 	return (
 		<Box className={styles.header_container}>
-			<AppBar className={styles.header}>
+			<AppBar
+				className={classNames(styles.header, {
+					[styles.header_has_scroll]: hasScroll,
+				})}
+			>
 				<Toolbar
 					className={classNames(styles.toolbar, globalStyles.document_margin)}
 				>
@@ -29,9 +58,7 @@ const Header = () => {
 						{MENU_CHOICES.map(({ name, link }) => {
 							return (
 								<Link href={link} key={name}>
-									<Typography variant="button" noWrap component="p">
-										{name}
-									</Typography>
+									<Button>{name}</Button>
 								</Link>
 							);
 						})}
