@@ -5,8 +5,10 @@ import styles from './styles.module.css';
 
 const Banner = () => {
 	return (
-		<div className={styles.banner_container}>
-			<Image src={EscuelaBanner} alt="school-banner" />
+		<div className={styles.banner_wrapper}>
+			<div className={styles.banner_container}>
+				<Image src={EscuelaBanner} alt="school-banner" />
+			</div>
 		</div>
 	);
 };
