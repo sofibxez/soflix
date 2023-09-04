@@ -2,7 +2,7 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import createEmotionServer from '@emotion/server/create-instance';
-import theme from '../constants/theme';
+import theme from '../constants/styles/theme';
 import createEmotionCache from '../utils/createEmotionCache';
 
 export default function MyDocument(props) {

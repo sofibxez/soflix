@@ -1,0 +1,11 @@
+.header_container {
+	position: fixed;
+	width: 100vw;
+	z-index: 999;
+}
+
+.header {
+	background-color: transparent;
+	box-shadow: none;
+	color: white;
+}
