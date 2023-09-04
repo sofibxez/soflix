@@ -15,8 +15,4 @@ export const MENU_CHOICES = [
 		name: 'Contactos',
 		link: '/',
 	},
-	{
-		name: 'Novedades',
-		link: '/',
-	},
 ];
