@@ -1,11 +1,40 @@
 .header_container {
 	position: fixed;
 	width: 100vw;
+	height: 80px;
 	z-index: 999;
 }
 
 .header {
+	width: 100vw;
+	height: 80px;
 	background-color: transparent;
 	box-shadow: none;
+}
+
+.toolbar {
+	display: flex;
+	justify-content: space-between;
+	/* El width es: 100% - (margin-left x 2) */
+	width: 84%;
+	height: 80px;
+	padding: 0;
 	color: white;
+}
+
+.menu_container {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+
+.menu_container > a {
+	text-decoration: none;
+	color: white;
+}
+
+.login_button {
+	padding: 0;
+	color: white;
+	min-width: max-content;
 }
