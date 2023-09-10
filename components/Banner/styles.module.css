@@ -17,3 +17,30 @@
 	width: 100%;
 	height: 100vh;
 }
+
+.banner_title {
+	font-weight: bold;
+}
+
+.title_container {
+	position: absolute;
+	top: 50%;
+	left: 24vw;
+
+	transform: translate(-50%, -50%);
+	color: white;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+
+	@media (max-width: 1000px) {
+		background-color: red;
+		left: 38%;
+	}
+}
+
+.banner_button {
+	margin-top: 4px;
+	width: max-content;
+	padding: 12px 32px;
+}
