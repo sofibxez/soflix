@@ -1,1 +1,1 @@
-export const DISTANCE_TO_CHANGE = 200;
+export const DISTANCE_TO_CHANGE = 100;

@@ -34,7 +34,6 @@
 	gap: 16px;
 
 	@media (max-width: 1000px) {
-		background-color: red;
 		left: 38%;
 	}
 }

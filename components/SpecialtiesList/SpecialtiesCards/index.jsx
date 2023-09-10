@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import Link from 'next/link';
 import { Box, Typography } from '@mui/material';
 import styles from './styles.module.css';
 
@@ -8,7 +7,6 @@ const SpecialtiesCards = ({
 	iconColor = 'black',
 	title,
 	description,
-	link = '#',
 }) => {
 	const [shouldShowLink, setShouldShowLink] = useState(false);
 
@@ -45,11 +43,13 @@ const SpecialtiesCards = ({
 
 			{shouldShowLink && (
 				<Box className={styles.specialty_link_container}>
-					<Link href={link} className={styles.specialty_link}>
-						<Typography variant="button" component="p">
-							Saber más
-						</Typography>
-					</Link>
+					<Typography
+						variant="button"
+						component="p"
+						className={styles.specialty_link}
+					>
+						Saber más
+					</Typography>
 				</Box>
 			)}
 		</div>

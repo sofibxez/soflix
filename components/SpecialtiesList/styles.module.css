@@ -1,24 +1,23 @@
 .specialties_wrapper {
-	width: 100%;
-	max-width: 100%;
+	width: 110%;
 	position: relative;
 	top: -120px;
-	margin-bottom: -40px;
+	left: -5%;
+	margin-bottom: -64px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
 .specialties_container {
+	padding: 24px 0px;
 	width: max-content;
 	max-width: 100%;
-	border-radius: 6px;
 	overflow: hidden;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
-	box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
 .card_divider {
@@ -26,4 +25,8 @@
 	height: 0px;
 	margin: -120px;
 	transform: rotate(90deg);
+}
+
+.specialty_link {
+	text-decoration: none;
 }

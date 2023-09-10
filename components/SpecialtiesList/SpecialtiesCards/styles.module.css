@@ -9,6 +9,9 @@
 	gap: 8px;
 	cursor: pointer;
 	padding: 40px 24px;
+	box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+	margin: 4px;
+	border-radius: 6px;
 }
 
 .specialty_icon {
@@ -17,6 +20,7 @@
 
 .specialty_title {
 	text-align: center;
+	color: black;
 }
 
 .specialty_description {
