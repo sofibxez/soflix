@@ -25,13 +25,17 @@
 .title_container {
 	position: absolute;
 	top: 50%;
-	left: 24vw;
-
+	left: 16%;
 	transform: translate(-50%, -50%);
 	color: white;
 	display: flex;
 	flex-direction: column;
 	gap: 16px;
+	transition: left 0.5s ease;
+
+	@media (max-width: 1600px) {
+		left: 24%;
+	}
 
 	@media (max-width: 1000px) {
 		left: 38%;

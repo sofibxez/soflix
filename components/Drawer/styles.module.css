@@ -1,0 +1,15 @@
+.drawer {
+	@media (min-width: 800px) {
+		display: none;
+	}
+}
+
+.list_container {
+	width: 250px;
+	background-color: #93c572;
+	height: 100%;
+}
+
+.list_item {
+	color: white;
+}

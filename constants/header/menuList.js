@@ -1,3 +1,9 @@
+import { SPECIALTY_CARD_LIST } from '../home/specialtySection';
+
+const specialtyChoices = SPECIALTY_CARD_LIST.map(({ title, link }) => {
+	return { name: title, link };
+});
+
 export const MENU_CHOICES = [
 	{
 		name: 'Inicio',
@@ -9,7 +15,7 @@ export const MENU_CHOICES = [
 	},
 	{
 		name: 'Especialidades',
-		link: '/',
+		subItems: specialtyChoices,
 	},
 	{
 		name: 'Contactos',

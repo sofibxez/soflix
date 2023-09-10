@@ -1,0 +1,47 @@
+.menu_container {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+
+	@media (max-width: 800px) {
+		display: none;
+	}
+}
+
+.item_container {
+	display: flex;
+	align-items: center;
+}
+
+.item_container > button {
+	color: white;
+	padding-right: 4px;
+}
+
+.menu_item > a {
+	text-decoration: none;
+	color: white;
+}
+
+.menu_item > button {
+	color: white;
+}
+
+.menu_item > a > button {
+	color: white;
+}
+
+.sub_menu_link {
+	color: #191716;
+	text-decoration: none;
+}
+
+.sub_menu_link:hover {
+	color: #93c572;
+}
+
+.login_button {
+	padding: 0;
+	color: white;
+	min-width: max-content;
+}

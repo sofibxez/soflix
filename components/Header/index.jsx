@@ -1,24 +1,20 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
-import {
-	AppBar,
-	Box,
-	Toolbar,
-	Button,
-	// IconButton
-	// MenuIcon
-} from '@mui/material';
-import { MENU_CHOICES } from '../../constants/header/menuList';
+import { AppBar, Box, Toolbar, Tooltip } from '@mui/material';
+import Sidebar from '../Drawer';
+import HeaderMenuList from './HeaderMenuList';
 import { DISTANCE_TO_CHANGE } from '../../constants/header/headerRules';
-import classNames from 'classnames';
 import Logo from './../../assets/img/logo.png';
 import globalStyles from './../../assets/styles/global.module.css';
+import MenuIcon from '@mui/icons-material/Menu';
+import classNames from 'classnames';
 import styles from './styles.module.css';
+import Link from 'next/link';
 
 const Header = () => {
 	const [scrollY, setScrollY] = useState(0);
 	const [hasScroll, setHasScroll] = useState(false);
+	const [showDrawer, setShowDrawer] = useState(false);
 
 	useEffect(() => {
 		// va actualizando "scrollY" con la ubicación del scroll
@@ -52,29 +48,20 @@ const Header = () => {
 				<Toolbar
 					className={classNames(styles.toolbar, globalStyles.document_margin)}
 				>
-					<Image src={Logo} width={48} height={48} alt="logo" />
+					<Link href="/">
+						<Tooltip title="Inicio - Tec 3" placement="bottom-start">
+							<Image src={Logo} width={48} height={48} alt="logo" />
+						</Tooltip>
+					</Link>
 
-					<div className={styles.menu_container}>
-						{MENU_CHOICES.map(({ name, link }) => {
-							return (
-								<Link href={link} key={name}>
-									<Button>{name}</Button>
-								</Link>
-							);
-						})}
+					<HeaderMenuList />
 
-						<Button className={styles.login_button}>Login</Button>
-					</div>
+					<MenuIcon
+						className={styles.menu_button}
+						onClick={() => setShowDrawer(true)}
+					/>
 
-					{/* <IconButton
-						size="large"
-						edge="start"
-						color="inherit"
-						aria-label="menu"
-						sx={{ mr: 2 }}
-					>
-						<MenuIcon />
-					</IconButton> */}
+					<Sidebar showDrawer={showDrawer} setShowDrawer={setShowDrawer} />
 				</Toolbar>
 			</AppBar>
 		</Box>

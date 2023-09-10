@@ -15,9 +15,12 @@ const SpecialtiesList = () => {
 						index
 					) => {
 						return (
-							<Link href={link} className={styles.specialty_link}>
+							<Link
+								href={link}
+								className={styles.specialty_link}
+								key={`specialty_card_${index}`}
+							>
 								<SpecialtiesCards
-									key={`specialty_card_${index}`}
 									SpecialtyIcon={SpecialtyIcon}
 									iconColor={iconColor}
 									title={title}

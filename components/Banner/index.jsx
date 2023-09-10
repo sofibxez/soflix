@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { Box, Button, Fade, Typography } from '@mui/material';
 import EscuelaBanner from './../../assets/img/escuela-banner.jpg';
 import styles from './styles.module.css';
+import Link from 'next/link';
 
 const Banner = () => {
 	return (
@@ -30,13 +31,15 @@ const Banner = () => {
 							</Typography>
 						</Box>
 
-						<Button
-							variant="contained"
-							size="large"
-							className={styles.banner_button}
-						>
-							Inscripciones
-						</Button>
+						<Link href="/inscripciones">
+							<Button
+								variant="contained"
+								size="large"
+								className={styles.banner_button}
+							>
+								Inscripciones
+							</Button>
+						</Link>
 					</Box>
 				</Fade>
 			</Box>
