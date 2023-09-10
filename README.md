@@ -21,6 +21,8 @@ resultado.
 
 ## Links útiles
 
+Se requiere tener [NodeJS](https://nodejs.org/es) en su version LTS instalado.
+
 Para saber más acerca de este proyecto:
 
 - [Next.js](https://nextjs.org/docs)
