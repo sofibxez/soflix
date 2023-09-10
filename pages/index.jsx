@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Banner from '../components/Banner';
 import SpecialtiesList from '../components/SpecialtiesList';
-import styles from './index..module.css';
+import styles from './index.module.css';
 
 const Home = () => {
 	return (

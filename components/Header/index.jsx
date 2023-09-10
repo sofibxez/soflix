@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { AppBar, Box, Button, Toolbar, Tooltip } from '@mui/material';
 import Sidebar from '../Drawer';
 import HeaderMenuList from './HeaderMenuList';
@@ -12,9 +13,13 @@ import classNames from 'classnames';
 import styles from './styles.module.css';
 
 const Header = () => {
+	const { route } = useRouter();
+
 	const [scrollY, setScrollY] = useState(0);
 	const [hasScroll, setHasScroll] = useState(false);
 	const [showDrawer, setShowDrawer] = useState(false);
+
+	const homeRoute = route === '/';
 
 	useEffect(() => {
 		// va actualizando "scrollY" con la ubicación del scroll
@@ -31,12 +36,12 @@ const Header = () => {
 
 	useEffect(() => {
 		// si el scroll supera el limite activamos "hasScroll"
-		if (scrollY > DISTANCE_TO_CHANGE) {
+		if (scrollY > DISTANCE_TO_CHANGE || !homeRoute) {
 			setHasScroll(true);
 		} else {
 			setHasScroll(false);
 		}
-	}, [scrollY, DISTANCE_TO_CHANGE]);
+	}, [scrollY, DISTANCE_TO_CHANGE, homeRoute]);
 
 	return (
 		<Box>
