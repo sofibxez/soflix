@@ -8,7 +8,7 @@ const Home = () => {
 		<div className={styles.home_container}>
 			<Banner />
 			<SpecialtiesList />
-			<p>
+			<p id="contactos">
 				Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut at ex
 				architecto accusamus soluta atque praesentium voluptas molestias, fugiat
 				eligendi, quidem cum illum debitis eius magni facere commodi ipsa

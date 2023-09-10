@@ -11,7 +11,7 @@ export const MENU_CHOICES = [
 	},
 	{
 		name: 'Acerca del colegio',
-		link: '/',
+		link: '/historia',
 	},
 	{
 		name: 'Especialidades',
@@ -19,6 +19,6 @@ export const MENU_CHOICES = [
 	},
 	{
 		name: 'Contactos',
-		link: '/',
+		link: '/#contactos',
 	},
 ];

@@ -8,8 +8,14 @@
 	width: 250px;
 	background-color: #93c572;
 	height: 100%;
+	font-size: 14px;
+	font-weight: bold;
+	text-transform: uppercase;
 }
 
-.list_item {
+.sub_menu_link,
+.list_item,
+.drawer_item > a {
 	color: white;
+	text-decoration: none;
 }

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
-import { AppBar, Box, Toolbar, Tooltip } from '@mui/material';
+import Link from 'next/link';
+import { AppBar, Box, Button, Toolbar, Tooltip } from '@mui/material';
 import Sidebar from '../Drawer';
 import HeaderMenuList from './HeaderMenuList';
 import { DISTANCE_TO_CHANGE } from '../../constants/header/headerRules';
@@ -9,7 +10,6 @@ import globalStyles from './../../assets/styles/global.module.css';
 import MenuIcon from '@mui/icons-material/Menu';
 import classNames from 'classnames';
 import styles from './styles.module.css';
-import Link from 'next/link';
 
 const Header = () => {
 	const [scrollY, setScrollY] = useState(0);
@@ -39,7 +39,7 @@ const Header = () => {
 	}, [scrollY, DISTANCE_TO_CHANGE]);
 
 	return (
-		<Box className={styles.header_container}>
+		<Box>
 			<AppBar
 				className={classNames(styles.header, {
 					[styles.header_has_scroll]: hasScroll,
@@ -54,12 +54,18 @@ const Header = () => {
 						</Tooltip>
 					</Link>
 
-					<HeaderMenuList />
+					<Box className={styles.menu_container}>
+						<HeaderMenuList />
 
-					<MenuIcon
-						className={styles.menu_button}
-						onClick={() => setShowDrawer(true)}
-					/>
+						<Link href="/login" className={styles.menu_item}>
+							<Button>Login</Button>
+						</Link>
+
+						<MenuIcon
+							className={styles.menu_button}
+							onClick={() => setShowDrawer(true)}
+						/>
+					</Box>
 
 					<Sidebar showDrawer={showDrawer} setShowDrawer={setShowDrawer} />
 				</Toolbar>

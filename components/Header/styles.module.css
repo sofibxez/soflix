@@ -28,6 +28,19 @@
 	color: white;
 }
 
+.menu_container,
+.menu_container > div {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+
+.menu_container > div {
+	@media (max-width: 800px) {
+		display: none;
+	}
+}
+
 .menu_button {
 	display: none;
 	cursor: pointer;
@@ -35,4 +48,10 @@
 	@media (max-width: 800px) {
 		display: flex;
 	}
+}
+
+.menu_item,
+.menu_item > button {
+	text-decoration: none;
+	color: white;
 }

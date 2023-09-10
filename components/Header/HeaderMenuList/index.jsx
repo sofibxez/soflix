@@ -13,12 +13,12 @@ const HeaderMenuList = () => {
 		subItems && setAnchorElSubItems(event.currentTarget);
 	};
 
-	const handleCloseUserMenu = () => {
+	const handleCloseSubItems = () => {
 		setAnchorElSubItems(null);
 	};
 
 	return (
-		<Box className={styles.menu_container}>
+		<Box className={styles.menu_list_wrapper}>
 			{MENU_CHOICES.map(({ name, link, subItems }) => {
 				return (
 					<Box key={`header_menu_list_${name}`} className={styles.menu_item}>
@@ -42,11 +42,9 @@ const HeaderMenuList = () => {
 							</Box>
 						)}
 
-						{console.log(subItems)}
-
 						{subItems && (
 							<Menu
-								sx={{ mt: '40px' }}
+								className={styles.sub_menu_container}
 								id={`${name}_sub_list`}
 								anchorEl={anchorElSubItems}
 								anchorOrigin={{
@@ -60,12 +58,12 @@ const HeaderMenuList = () => {
 									horizontal: 'left',
 								}}
 								open={Boolean(anchorElSubItems)}
-								onClose={handleCloseUserMenu}
+								onClose={handleCloseSubItems}
 							>
 								{subItems?.map(({ name: subName, link: subLink }) => (
 									<MenuItem
-										key={`${subName}_sub_item`}
-										onClick={handleCloseUserMenu}
+										key={`header_${name}_sub_menu_${subName}`}
+										onClick={handleCloseSubItems}
 									>
 										<Link href={subLink} className={styles.sub_menu_link}>
 											<Typography textAlign="center">{subName}</Typography>
@@ -77,8 +75,6 @@ const HeaderMenuList = () => {
 					</Box>
 				);
 			})}
-
-			<Button className={styles.login_button}>Login</Button>
 		</Box>
 	);
 };
