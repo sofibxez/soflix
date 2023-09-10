@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import { Box, Button, Typography } from '@mui/material';
+import { Box, Button, Fade, Typography } from '@mui/material';
 import EscuelaBanner from './../../assets/img/escuela-banner.jpg';
 import styles from './styles.module.css';
 
@@ -10,33 +10,35 @@ const Banner = () => {
 			<Box className={styles.banner_container}>
 				<Image src={EscuelaBanner} alt="school-banner" />
 
-				<Box className={styles.title_container}>
-					<Typography
-						variant="h2"
-						component="h2"
-						className={styles.banner_title}
-					>
-						E.E.S.T. N°3
-					</Typography>
-
-					<Box>
+				<Fade in={true}>
+					<Box className={styles.title_container}>
 						<Typography
-							variant="body1"
-							component="p"
-							className={styles.banner_text}
+							variant="h2"
+							component="h2"
+							className={styles.banner_title}
 						>
-							"DOMINGO FAUSTINO SARMIENTO", Distrito de Gral. Pueyrredón
+							E.E.S.T. N°3
 						</Typography>
-					</Box>
 
-					<Button
-						variant="contained"
-						size="large"
-						className={styles.banner_button}
-					>
-						Inscripciones
-					</Button>
-				</Box>
+						<Box>
+							<Typography
+								variant="body1"
+								component="p"
+								className={styles.banner_text}
+							>
+								"DOMINGO FAUSTINO SARMIENTO", Distrito de Gral. Pueyrredón
+							</Typography>
+						</Box>
+
+						<Button
+							variant="contained"
+							size="large"
+							className={styles.banner_button}
+						>
+							Inscripciones
+						</Button>
+					</Box>
+				</Fade>
 			</Box>
 		</Box>
 	);

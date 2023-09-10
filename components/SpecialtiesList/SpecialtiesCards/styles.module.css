@@ -1,0 +1,43 @@
+.specialty_container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 320px;
+	height: 240px;
+	background-color: white;
+	gap: 8px;
+	cursor: pointer;
+	padding: 40px 24px;
+}
+
+.specialty_icon {
+	font-size: 52px;
+}
+
+.specialty_title {
+	text-align: center;
+}
+
+.specialty_description {
+	color: #57647c;
+	text-align: center;
+	line-height: 24px;
+}
+
+.specialty_link_container {
+	transition: all 0.2s ease-in-out;
+	height: 24px;
+	cursor: pointer;
+	width: max-content;
+}
+
+.specialty_link {
+	text-decoration: none;
+	color: #93c572;
+	text-wrap: nowrap;
+}
+
+.specialty_link:hover {
+	text-decoration: underline;
+}
