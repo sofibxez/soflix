@@ -6,6 +6,7 @@ import { AppBar, Box, Button, Toolbar, Tooltip } from '@mui/material';
 import Sidebar from '../Drawer';
 import HeaderMenuList from './HeaderMenuList';
 import { DISTANCE_TO_CHANGE } from '../../constants/header/headerRules';
+import { PATH_ROUTES } from '../../constants/routes/routes';
 import Logo from './../../assets/img/logo.png';
 import globalStyles from './../../assets/styles/global.module.css';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -19,7 +20,7 @@ const Header = () => {
 	const [hasScroll, setHasScroll] = useState(false);
 	const [showDrawer, setShowDrawer] = useState(false);
 
-	const homeRoute = route === '/';
+	const isHomeRoute = route === PATH_ROUTES.HOME;
 
 	useEffect(() => {
 		// va actualizando "scrollY" con la ubicación del scroll
@@ -36,7 +37,7 @@ const Header = () => {
 
 	useEffect(() => {
 		// si el scroll supera el limite activamos "hasScroll"
-		if (scrollY > DISTANCE_TO_CHANGE || !homeRoute) {
+		if (scrollY > DISTANCE_TO_CHANGE || !isHomeRoute) {
 			setHasScroll(true);
 		} else {
 			setHasScroll(false);

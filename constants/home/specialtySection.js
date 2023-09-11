@@ -4,6 +4,7 @@ import ScienceIcon from '@mui/icons-material/Science';
 import MemoryIcon from '@mui/icons-material/Memory';
 import TerminalIcon from '@mui/icons-material/Terminal';
 import HandymanIcon from '@mui/icons-material/Handyman';
+import { PATH_ROUTES } from '../routes/routes';
 
 export const SPECIALTY_CARD_LIST = [
 	{
@@ -12,7 +13,7 @@ export const SPECIALTY_CARD_LIST = [
 		title: 'Informática',
 		description:
 			'El Técnico en Informática Profesional y Personal está capacitado para asistir al usuario de productos...',
-		link: '/especialidades/informatica',
+		link: PATH_ROUTES.ESPECIALIDADES.INFORMATICA,
 	},
 	{
 		SpecialtyIcon: DirectionsCarFilledOutlinedIcon,
@@ -20,7 +21,7 @@ export const SPECIALTY_CARD_LIST = [
 		title: 'Automotores',
 		description:
 			'El Técnico en Automotores está capacitado para manifestar conocimientos, habilidades...',
-		link: '/especialidades/automotores',
+		link: PATH_ROUTES.ESPECIALIDADES.AUTOMOTORES,
 	},
 	{
 		SpecialtyIcon: FlashOnIcon,
@@ -28,7 +29,7 @@ export const SPECIALTY_CARD_LIST = [
 		title: 'Electromecánica',
 		description:
 			'El Técnico del sector Electromecánico está capacitado para manifestar conocimientos, habilidades...',
-		link: '/especialidades/electromecanica',
+		link: PATH_ROUTES.ESPECIALIDADES.ELECTROMECANICA,
 	},
 	{
 		SpecialtyIcon: ScienceIcon,
@@ -36,7 +37,7 @@ export const SPECIALTY_CARD_LIST = [
 		title: 'Química',
 		description:
 			'El Técnico del sector químico está capacitado para manifestar conocimientos, habilidades...',
-		link: '/especialidades/quimica',
+		link: PATH_ROUTES.ESPECIALIDADES.QUIMICA,
 	},
 	{
 		SpecialtyIcon: MemoryIcon,
@@ -44,7 +45,7 @@ export const SPECIALTY_CARD_LIST = [
 		title: 'Electrónica',
 		description:
 			'El Técnico en Electrónica está capacitado para manifestar conocimientos, habilidades...',
-		link: '/especialidades/electronica',
+		link: PATH_ROUTES.ESPECIALIDADES.ELECTRONICA,
 	},
 	{
 		SpecialtyIcon: HandymanIcon,
@@ -52,6 +53,6 @@ export const SPECIALTY_CARD_LIST = [
 		title: 'Construcciones',
 		description:
 			'El Maestro Mayor de Obras está capacitado para manifestar conocimientos, habilidades...',
-		link: '/especialidades/construcciones',
+		link: PATH_ROUTES.ESPECIALIDADES.CONSTRUCCIONES,
 	},
 ];
