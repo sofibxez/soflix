@@ -42,7 +42,7 @@ const Header = () => {
 		} else {
 			setHasScroll(false);
 		}
-	}, [scrollY, DISTANCE_TO_CHANGE, homeRoute]);
+	}, [scrollY, DISTANCE_TO_CHANGE, isHomeRoute]);
 
 	return (
 		<Box>
