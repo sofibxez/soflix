@@ -1,4 +1,4 @@
-# Soflix - [Sofia Baez](https://github.com/sofibxez))
+# Soflix - [Sofia Baez](https://github.com/sofibxez)
 
 Esto es un proyecto inicializado con [Next.js](https://nextjs.org/docs)
 utilizando
