@@ -1,15 +1,15 @@
 import React from 'react';
 import Image from 'next/image';
 import { Box, Button, Fade, Typography } from '@mui/material';
-import EscuelaBanner from './../../assets/img/escuela-banner.jpg';
-import styles from './styles.module.css';
+import BannerTemporal from './../../assets/img/banner-temporal.jpg';
 import Link from 'next/link';
+import styles from './styles.module.css';
 
 const Banner = () => {
 	return (
 		<Box className={styles.banner_wrapper}>
 			<Box className={styles.banner_container}>
-				<Image src={EscuelaBanner} alt="school-banner" />
+				<Image src={BannerTemporal} alt="school-banner" />
 
 				<Fade in={true}>
 					<Box className={styles.title_container}>
@@ -18,7 +18,7 @@ const Banner = () => {
 							component="h2"
 							className={styles.banner_title}
 						>
-							E.E.S.T. N°3
+							Las chicas del cable
 						</Typography>
 
 						<Box>
@@ -27,7 +27,8 @@ const Banner = () => {
 								component="p"
 								className={styles.banner_text}
 							>
-								"DOMINGO FAUSTINO SARMIENTO", Distrito de Gral. Pueyrredón
+								Cuatro mujeres de la Compañía Telefónica Nacional española
+								promueven una…
 							</Typography>
 						</Box>
 
@@ -37,7 +38,7 @@ const Banner = () => {
 								size="large"
 								className={styles.banner_button}
 							>
-								Inscripciones
+								Ver ▶
 							</Button>
 						</Link>
 					</Box>

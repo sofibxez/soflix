@@ -1,4 +1,4 @@
-# Pasantías Técnica 3 - MDP ([Rocio Casquero](https://github.com/RocioCasquero) y [Sofia Baez](https://github.com/sofibxez))
+# Soflix - [Sofia Baez](https://github.com/sofibxez))
 
 Esto es un proyecto inicializado con [Next.js](https://nextjs.org/docs)
 utilizando
@@ -30,5 +30,4 @@ Para saber más acerca de este proyecto:
 
 ---
 
-Hecho con ❤️ por [Rocio Casquero](https://github.com/RocioCasquero) y
-[Sofia Baez](https://github.com/sofibxez) ©2023
+Hecho con ❤️ por [Sofia Baez](https://github.com/sofibxez) ©2023

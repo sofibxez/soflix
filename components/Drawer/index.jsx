@@ -88,23 +88,25 @@ const Sidebar = ({ showDrawer, setShowDrawer }) => {
 										</ListItemButton>
 									</ListItem>
 
-									<Collapse in={openSubMenu} timeout="auto" unmountOnExit>
-										<List component="div" disablePadding>
-											{subItems?.map(({ name: subName, link: subLink }) => (
-												<Link
-													href={subLink}
-													className={styles.sub_menu_link}
-													onClick={toggleDrawer(false)}
-													onKeyDown={toggleDrawer(false)}
-													key={`drawer_${name}_sub_menu_${subName}`}
-												>
-													<ListItemButton sx={{ pl: 4 }}>
-														<ListItemText primary={subName} />
-													</ListItemButton>
-												</Link>
-											))}
-										</List>
-									</Collapse>
+									{subItems?.length > 1 && (
+										<Collapse in={openSubMenu} timeout="auto" unmountOnExit>
+											<List component="div" disablePadding>
+												{subItems?.map(({ name: subName, link: subLink }) => (
+													<Link
+														href={subLink}
+														className={styles.sub_menu_link}
+														onClick={toggleDrawer(false)}
+														onKeyDown={toggleDrawer(false)}
+														key={`drawer_${name}_sub_menu_${subName}`}
+													>
+														<ListItemButton sx={{ pl: 4 }}>
+															<ListItemText primary={subName} />
+														</ListItemButton>
+													</Link>
+												))}
+											</List>
+										</Collapse>
+									)}
 								</>
 							)}
 						</Box>

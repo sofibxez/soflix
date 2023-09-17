@@ -1,25 +1,24 @@
-import { SPECIALTY_CARD_LIST } from '../home/specialtySection';
-import { HASH_ROUTES, PATH_ROUTES } from '../routes/routes';
-
-const specialtyChoices = SPECIALTY_CARD_LIST.map(({ title, link }) => {
-	return { name: title, link };
-});
+import { PATH_ROUTES } from '../routes/routes';
 
 export const MENU_CHOICES = [
 	{
 		name: 'Inicio',
 		link: PATH_ROUTES.HOME,
+		subItems: [],
 	},
 	{
-		name: 'Acerca del colegio',
-		link: PATH_ROUTES.HISTORIA,
+		name: 'Series',
+		link: PATH_ROUTES.SERIES,
+		subItems: [],
 	},
 	{
-		name: 'Especialidades',
-		subItems: specialtyChoices,
+		name: 'Películas',
+		link: PATH_ROUTES.PELICULAS,
+		subItems: [],
 	},
 	{
-		name: 'Contactos',
-		link: HASH_ROUTES.CONTACTOS,
+		name: 'Populares',
+		link: PATH_ROUTES.POPULARES,
+		subItems: [],
 	},
 ];

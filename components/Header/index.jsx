@@ -54,10 +54,8 @@ const Header = () => {
 				<Toolbar
 					className={classNames(styles.toolbar, globalStyles.document_margin)}
 				>
-					<Link href="/">
-						<Tooltip title="Inicio - Tec 3" placement="bottom-start">
-							<Image src={Logo} width={48} height={48} alt="logo" />
-						</Tooltip>
+					<Link href="/" className={styles.logoLink}>
+						<Image src={Logo} width={80} height={32} alt="logo" />
 					</Link>
 
 					<Box className={styles.menu_container}>
