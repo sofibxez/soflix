@@ -1,4 +1,6 @@
-# Soflix - [Sofia Baez](https://github.com/sofibxez)
+# tecflix - [Sofia Baez](https://github.com/sofibxez)
+
+# tecflix -[Casquero Rocio](https://github.com/RocioCasquero)
 
 Esto es un proyecto inicializado con [Next.js](https://nextjs.org/docs)
 utilizando
@@ -30,4 +32,4 @@ Para saber más acerca de este proyecto:
 
 ---
 
-Hecho con ❤️ por [Sofia Baez](https://github.com/sofibxez) ©2023
+Hecho con ❤️ por [Sofia Baez](https://github.com/sofibxez) y [Casquero Rocio](https://github.com/RocioCasquero) ©2023
